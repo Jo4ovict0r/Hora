@@ -13,14 +13,21 @@ const altura2 = altura/24;
 const largura2 = largura/24;
 
 let ultimaHora = "dia"
+/* horario de brasília
+let datatempo;
+
+async function buscarhora(){
+
+    if(!datatempo){
+        const resposta = await fetch("https://worldtimeapi.org/api/timezone/America/Sao_Paulo");
+        const dados = await resposta.json();
+        datatempo = new Date(dados.datetime);
+    }else{
+        datatempo.setSeconds(datatempo.getSeconds()+1);
+    } */
 function buscarhora(){
-    const datatempo = new Date(
-        new Date().toLocaleString("pt-BR",{
-            timeZone:"America/Sao_Paulo",
-            hour: "2-digit",
-            minute: "2-digit",
-            second: "2-digit"
-        }));
+    const datatempo = new Date();
+
     const hora = datatempo.getHours();
     const minutos = datatempo.getMinutes();
     const segundos = datatempo.getSeconds();
