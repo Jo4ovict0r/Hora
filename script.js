@@ -20,7 +20,7 @@ function buscarhora(){
             hour: "2-digit",
             minute: "2-digit",
             second: "2-digit"
-        });
+        }));
     const hora = datatempo.getHours();
     const minutos = datatempo.getMinutes();
     const segundos = datatempo.getSeconds();
