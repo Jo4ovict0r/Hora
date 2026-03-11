@@ -28,9 +28,9 @@ async function buscarhora(){
 function buscarhora(){
     const datatempo = new Date();
 
-    const hora = datatempo.getHours();
-    const minutos = datatempo.getMinutes();
-    const segundos = datatempo.getSeconds();
+    const hora = String(datatempo.getHours()).padStart(2,'0');
+    const minutos = String(datatempo.getMinutes()).padStart(2,'0');
+    const segundos = String(datatempo.getSeconds()).padStart(2,'0');
 
     if (hora >= 20 || hora <= 5){
         body.className = "noite";
