@@ -14,7 +14,13 @@ const largura2 = largura/24;
 
 let ultimaHora = "dia"
 function buscarhora(){
-    const datatempo = new Date();
+    const datatempo = new Date(
+        new Date().toLocaleString("pt-BR",{
+            timeZone:"America/Sao_Paulo",
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit"
+        });
     const hora = datatempo.getHours();
     const minutos = datatempo.getMinutes();
     const segundos = datatempo.getSeconds();
